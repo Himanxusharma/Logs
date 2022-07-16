@@ -1,0 +1,21 @@
+
+└─$ grep -n "bell" hello.log
+
+
+└─$ echo $var 
+
+
+└─$ unset var             
+
+
+└─$ grep -n "bell" hello.log | sed -n '1,5p'
+
+
+└─$ sed -n '1,5p' hello.log | grep -n "bell"
+
+
+└─$ grep -n "bell" hello.log | sed -n '1,3p' |  grep -Eo '^[^:]+' 
+
+
+└─$ var=$( grep -n "bell" hello.log | sed -n '1,3p' |  grep -Eo '^[^:]+' )
+
