@@ -1,0 +1,371 @@
+──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ less hello.log
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" *.log   
+hello.log:2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+hello.log:3:Incline dumbbell press (2-3 sets, 10-15 reps)
+hello.log:5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+hello.log:9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+hello.log:11:Barbell lunge (2 sets, 10-15 reps)
+hello.log:18:Dumbbell kickback
+hello.log:20:Standing dumbbell triceps extension
+hello.log:21:Barbell bench press
+hello.log:23:Barbell deadlift (4 sets, 10-12 reps)
+hello.log:24:Bent over barbell row (2-3 sets, 10-15 reps)
+hello.log:30:Dumbbell shoulder press (2 sets, 10-15 reps)
+hello.log:33:Dumbbell rear delt row (2-3 sets, 10-15 reps)
+hello.log:34:Dumbbell shrug (2-3 sets, 10-15 reps)
+hello.log:36:Barbell curl (4 sets, 12, 10, 10, 7 pyramid)
+hello.log:39:Supinated dumbbell curls (2-3 sets, 10-15 reps).  B b.            
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+18:Dumbbell kickback
+20:Standing dumbbell triceps extension
+21:Barbell bench press
+23:Barbell deadlift (4 sets, 10-12 reps)
+24:Bent over barbell row (2-3 sets, 10-15 reps)
+30:Dumbbell shoulder press (2 sets, 10-15 reps)
+33:Dumbbell rear delt row (2-3 sets, 10-15 reps)
+34:Dumbbell shrug (2-3 sets, 10-15 reps)
+36:Barbell curl (4 sets, 12, 10, 10, 7 pyramid)
+39:Supinated dumbbell curls (2-3 sets, 10-15 reps).  B b.            
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(     
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log)"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo var
+var
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo "var"
+var
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var.txt = "$(grep -n "bell" hello.log)"
+var.txt: command not found
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var.txt = "$(grep -n "bell" hello.log)"
+var.txt: command not found
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log)"      
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var 
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+18:Dumbbell kickback
+20:Standing dumbbell triceps extension
+21:Barbell bench press
+23:Barbell deadlift (4 sets, 10-12 reps)
+24:Bent over barbell row (2-3 sets, 10-15 reps)
+30:Dumbbell shoulder press (2 sets, 10-15 reps)
+33:Dumbbell rear delt row (2-3 sets, 10-15 reps)
+34:Dumbbell shrug (2-3 sets, 10-15 reps)
+36:Barbell curl (4 sets, 12, 10, 10, 7 pyramid)
+39:Supinated dumbbell curls (2-3 sets, 10-15 reps).  B b.            
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ unset var             
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var
+
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1p'
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1,5p'
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ sed -n '1,5p' hello.log | grep -n "bell"
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ 
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "pattern" file.txt | grep -Eo '^[^:]+'
+)"
+grep: file.txt: No such file or directory
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log | grep -Eo '^[^:]+')"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log | grep -Eo '^[^:]+' | sed '1p' )"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log | grep -Eo '^[^:]+' | sed '1p' )"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var                                                        
+2
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ unset var
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log | grep -Eo '^[^:]+' | sed '1p' )"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var                                                        
+2
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log |sed '1p' |  grep -Eo '^[^:]+'  )"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ unset var                                                         
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var                                                         
+
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var="$(grep -n "bell" hello.log |sed '1p' |  grep -Eo '^[^:]+'  )"
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var                                                         
+2
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log |sed '1p' |  grep -Eo '^[^:]+'
+2
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ sed -n '1p' | grep -n "bell" hello.log |  grep -Eo '^[^:]+'
+2
+3
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+^[[A^[[A^[[A^[[B^X@sc^C^C
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ 
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log |sed '1,5p' |  grep -Eo '^[^:]+' 
+2
+2
+3
+3
+5
+5
+9
+9
+11
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log |sed '1,5p'                     
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+18:Dumbbell kickback
+20:Standing dumbbell triceps extension
+21:Barbell bench press
+23:Barbell deadlift (4 sets, 10-12 reps)
+24:Bent over barbell row (2-3 sets, 10-15 reps)
+30:Dumbbell shoulder press (2 sets, 10-15 reps)
+33:Dumbbell rear delt row (2-3 sets, 10-15 reps)
+34:Dumbbell shrug (2-3 sets, 10-15 reps)
+36:Barbell curl (4 sets, 12, 10, 10, 7 pyramid)
+39:Supinated dumbbell curls (2-3 sets, 10-15 reps).  B b.            
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1,5p'
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+3:Incline dumbbell press (2-3 sets, 10-15 reps)
+5:Supine dumbbell flyes (2-3 sets, 10-15 reps)
+9:Barbell squat (4 sets, 12, 10, 10, 7 pyramid reps)
+11:Barbell lunge (2 sets, 10-15 reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1p'  
+2:Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1p' |  grep -Eo '^[^:]+' 
+2
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed -n '1,3p' |  grep -Eo '^[^:]+' 
+2
+3
+5
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ var=$( grep -n "bell" hello.log | sed -n '1,3p' |  grep -Eo '^[^:]+' ) 
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ echo $var
+2
+3
+5
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep  "bell" hello.log | sed -n '1,3p' |  grep -Eo '^[^:]+'         
+Barbell bench press (4 sets, 12, 10, 10, 7 pyramid reps)
+Incline dumbbell press (2-3 sets, 10-15 reps)
+Supine dumbbell flyes (2-3 sets, 10-15 reps)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ grep -n "bell" hello.log | sed '1,3p' |  grep -Eo '^[^:]+'         
+2
+2
+3
+3
+5
+5
+9
+11
+18
+20
+21
+23
+24
+30
+33
+34
+36
+39
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ less          
+Missing filename ("less --help" for help)
+                                                                                                                                                                                
+┌──(hawqui㉿Hawqui)-[~/Desktop]
+└─$ less hello.log
+                          :wq
+
